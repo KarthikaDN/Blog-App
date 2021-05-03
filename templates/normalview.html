@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head%}
+   <title>ALL POSTS</title>
+{% endblock%}
+
+{% block body%}
+<hr>
+<h2 style="display: inline;">ALL POSTS</h2>
+<a style="display: inline; float: right;" href="/posts" class="btn btn-success">+ New Post</a>
+<a style="float: right; margin-right: 5%;" href="/posts" class="btn btn-danger">- Delete Post</a>
+<hr style="height: 10px; background-color: crimson;">
+    {% for post in posts %}
+        <h5> Post ID:   {{ post.id}}</h5>
+        <h5>Title:  {{ post.title }}</h5>
+        <h5><p style="white-space: pre-wrap;">Content:   {{ post.content}}</p></h5>
+        <h5>Author:   {{ post.author}}</h5>
+        <a class="btn btn-primary" href="/posts/edit/{{ post.id }}" style="height: 40px; margin-left: 45%;"><p>Edit Post {{ post.id }}</p></a>
+        <hr style="height: 5px; background-color: cyan;">
+    {% endfor %}
+
+{% endblock %}

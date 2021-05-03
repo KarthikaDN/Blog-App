@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head%}
+   <title>Posts</title>
+{% endblock%}
+
+{% block body%}
+  <hr>
+<h2 class="ph2" style="text-align: center;">Create New Blog post:</h2>
+   <form action="/posts" method="POST">
+      <label for="title">Title:</label>
+   <input class="form-control" type="text" placeholder="Enter title" name="title" id="title">
+   <br>
+   <label for="author">Author:</label>
+   <input class="form-control" type="text" placeholder="Author of the Post" name="author" id="author"><br>
+   <label for="content">Content:</label>
+    <textarea class="form-control" id="content" name="content" rows="3" placeholder="Contents"></textarea>
+   <br>
+   <input class="btn btn-success" type="submit" value="Post" id="btn" >
+   </form>
+   <hr style="height: 10px; background-color:cadetblue;">
+   <h2 style="text-align: center;">Delete Post</h2>
+   <form action="/posts/delete/" method="POST">
+      <label for="del">Enter Post ID:</label>
+      <input class="form-control" type="text" placeholder="ID of the Post" name="del" id="del"><br>
+      <input class="btn btn-danger" type="submit" value="Delete">
+     </form>
+     
+     <hr>
+   
+     
+   <h4 style="text-align: center;">Go Back to <a href="/">Home Page</a></h4>
+   <h4 style="text-align: center;"><a href="/posts/normalview">View  and Edit</a> all Posts </h4>
+   <h4 style="text-align: center;">View All Posts in <a href="/posts/jsonview">JSON format</a></h4>
+
+   
+   
+      
+   
+      
+      
+      
+   
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head%}
+<title>Flask app</title>
+{% endblock%}
+
+{% block body%}
+<h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Welcome To Blog Posts!</h1>
+<!--<h4 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">If you want to see the posts, <a
+    href="/posts">click here</a></h4> -->
+<br>
+<main role="main">
+  <div class="jumbotron">
+    <div class="col-sm-8 mx-auto">
+      <h1>RESTful Web Service using Python Flask</h1>
+      <p> We have created a simple <b>Blogging app</b> using Flask which demonstrates the use of <b>Databases, JSON and Web API.</b> </p>
+      <h3 style="text-align: center;">By</h3>
+      <p style="text-align: center;"><b>Karthika DN</b></p>
+      
+
+      <p>
+        <a class="btn btn-primary" href="/posts" role="button">Go to Posts &raquo;</a>
+      </p>
+      
+    </div>
+  </div>
+</main>
+
+{% endblock%}
