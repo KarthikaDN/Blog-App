@@ -4,7 +4,7 @@
                        databases.
 • Operation: By using Flask, SQLAlchemy(Database) and JSON I 
 have created a Blogging app, which performs create, read, update, 
-delete (CRUD) operations. We have used HTML forms and the 
+delete (CRUD) operations. I have used HTML forms and the 
 contents that has been filled in the form is inserted to database 
 using POST method. We can retrieve the contents from the 
 database using GET method. The jsonify() method displays the 
